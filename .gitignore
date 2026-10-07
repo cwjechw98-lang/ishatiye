@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.artifacts/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+pages-site/.next/
+pages-site/out/
+.deploy/
