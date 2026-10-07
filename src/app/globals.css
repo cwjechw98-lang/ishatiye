@@ -67,6 +67,18 @@ svg{flex-shrink:0}
 .brand-type{font-size:19px;line-height:1.1;font-weight:800;letter-spacing:-.6px;white-space:nowrap}
 .brand-type>span{color:var(--lime)}
 .brand-type>small{display:block;font-size:7.5px;font-weight:600;letter-spacing:1.65px;color:#858783;margin-top:7px}
+/* A warm neon sign: one faulty circuit turns «Соушиал» into «Соу…л». */
+.brand.brand-neon{display:block;width:100%;padding:0 0 22px;text-align:center;isolation:isolate}
+.neon-sign{display:flex;flex-direction:column;align-items:center;position:relative;padding:13px 10px 11px;border:1px solid #443b2d;border-radius:11px;background:#151412;box-shadow:inset 0 0 18px #4a311520,0 4px 12px #0d0d0d50}
+.neon-sign::before,.neon-sign::after{content:"";position:absolute;top:7px;width:4px;height:4px;border-radius:50%;background:#716959;box-shadow:inset 0 1px 1px #0a0a09}
+.neon-sign::before{left:8px}.neon-sign::after{right:8px}
+.neon-name,.neon-bar{color:#ffeed1;font-family:Arial,sans-serif;font-weight:500;-webkit-text-stroke:.35px #ffe1a0;text-shadow:0 0 2px #fff5dd,0 0 7px #ffc66b,0 0 18px #ed963d99,0 0 32px #dc79244d}
+.neon-name{display:flex;align-items:baseline;justify-content:center;font-size:31px;line-height:1.15;letter-spacing:-.7px;white-space:nowrap}
+.neon-bar{display:block;margin-top:2px;font-size:24px;line-height:1.1;letter-spacing:2px}
+.neon-tagline{display:block;margin-top:12px;color:#a99c86;font-size:7px;font-weight:650;letter-spacing:1.3px;line-height:1.5;text-shadow:none}
+.neon-fixed{opacity:1}.neon-fault{opacity:1;animation:soul-sign-flicker 12s steps(1,end) infinite}
+.brand-neon:hover .neon-fault,.brand-neon:focus-visible .neon-fault{animation:none;opacity:1}
+@keyframes soul-sign-flicker{0%,63%,66%,69%,72%,75%,86%,100%{opacity:1;color:#ffeed1;-webkit-text-stroke-color:#ffe1a0;text-shadow:0 0 2px #fff5dd,0 0 7px #ffc66b,0 0 18px #ed963d99,0 0 32px #dc79244d}64%,65%,70%,71%,76%,85%{opacity:.025;color:#735538;-webkit-text-stroke-color:#78583c;text-shadow:none}}
 .venue-switch{width:100%;display:flex;align-items:center;gap:9px;text-align:left;padding:10px 9px;background:#20211f;border:1px solid #343532;border-radius:8px;color:var(--text)}
 .venue-switch:hover{background:#2a2b29;border-color:#51534e}
 .venue-thumbnail{width:33px;height:35px;position:relative;flex-shrink:0}

@@ -26,6 +26,7 @@ const VIEW_TITLES: Record<View, { title: string; description: string }> = {
 };
 
 function Brand({ onClick }: { onClick: () => void }) {
+  if (DEMO_MODE) return <button className="brand brand-neon" onClick={onClick} aria-label="Соушиал Бар — на главную" title="Соушиал ↔ Соул — душевный бар. При наведении вывеска светится ровно."><span className="neon-sign" aria-hidden="true"><span className="neon-name"><span className="neon-fixed">Соу</span><span className="neon-fault">шиа</span><span className="neon-fixed">л</span></span><span className="neon-bar neon-fixed">Бар</span><span className="neon-tagline">ХОРОШИЕ ЛЮДИ РЯДОМ</span></span></button>;
   return <button className="brand" onClick={onClick} aria-label="BAR SOCIAL — на главную"><span className="brand-symbol"><Martini size={26} strokeWidth={1.8} /></span><span className="brand-type">BAR<span>SOCIAL</span><small>ХОРОШИЕ ЛЮДИ РЯДОМ</small></span></button>;
 }
 
